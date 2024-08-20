@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>坤博照片</title>
+{#<link> 标签用于链接外部样式表文件。
+        rel="stylesheet" 指定了链接文件与当前文档的关系是样式表。
+        href="{{url_for('static',filename='css/style.css')}} 
+        是使用 Jinja2 的 url_for 函数动态生成静态文件 style.css 的 URL。
+        static 是 Flask 用来提供静态文件服务的端点，
+        filename='css/style.css' 指定了静态文件的位置和名称。
+#}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <script src="{{url_for('static',filename='js/my.js')}}"></script>
+</head>
+<body>
+<img src ="{{ url_for('static',filename='images/kunbo.jpg')}}" alt="">
+
+</body>
+</html>
